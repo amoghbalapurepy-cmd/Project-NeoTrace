@@ -1,0 +1,7 @@
+# Object Identifier - Python Requirements
+# Install with:  pip install -r requirements.txt
+
+opencv-python>=4.9.0
+mediapipe>=0.10.0
+ultralytics>=8.0.0
+numpy>=1.24.0
