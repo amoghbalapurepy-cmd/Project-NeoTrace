@@ -271,10 +271,11 @@ class EmbeddingEngine:
         self.clip_backend = False
 
         try:
-            import face_recognition
-            self.face_backend = face_recognition
+            import importlib
+            self.face_backend = importlib.import_module("face_recognition")
             print("[INFO] face_recognition available — accurate face memory enabled.")
         except Exception:
+            self.face_backend = None
             print("[WARN] face_recognition not installed — face memory will use a lower-accuracy "
                   "fallback. For best results: pip install face_recognition")
 
